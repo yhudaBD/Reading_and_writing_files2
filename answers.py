@@ -1,6 +1,5 @@
-def print_file(file_name):
-      with open(file_name , "r") as file:
-         reading =  file.read()
-         return reading
-test = print_file("data.txt") 
-print(test)   
+def new_file(file_name , text):
+      with open(file_name , "w") as file:
+         writer =  file.write(text)
+         
+new_file("test1.txt" , "23523" ) 
