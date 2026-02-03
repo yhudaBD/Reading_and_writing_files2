@@ -1,7 +1,11 @@
-def new_file(file_name_source , target_file):
-      with open(file_name_source , "r") as file , open(target_file , "w") as target :
-          
-         for line in file:
-          target.write(line)
-
-new_file("data.txt" , "test1.txt")
+def Word_test(file_name , word):
+      counter = 0
+      with open(file_name , "r") as file :
+        for w in file:
+            new_word = w.split()
+            for i in new_word:
+             if i == word:
+              counter += 1
+        return counter     
+test = Word_test("answers.py" , "counter")
+print(test)
